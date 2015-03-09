@@ -8,5 +8,5 @@ namespace Ihsan\Compressor;
  */
 class JsClosureCompressor
 {
-    
+    //@todo
 }
