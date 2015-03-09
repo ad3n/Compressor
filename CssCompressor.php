@@ -5,7 +5,7 @@ namespace Ihsan\Compressor;
  * Author: Muhammad Surya Ihsanuddin<surya.kejawen@gmail.com>
  * Url: http://blog.khodam.org
  *
- * @see: ttps://gist.github.com/brentonstrine/5f56a24c7d34bb2d4655
+ * @see: https://gist.github.com/brentonstrine/5f56a24c7d34bb2d4655
  */
 final class CssCompressor implements CompressorInterface
 {
