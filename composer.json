@@ -4,7 +4,7 @@
     "type": "library",
     "description": "Ihsanuddin Composer Library",
     "autoload": {
-        "psr-0": { "Ihsan\\Compressor\\": "" }
+        "psr-4": { "Ihsan\\Compressor\\": "" }
     },
     "require": {
         "php": ">=5.3.3"
