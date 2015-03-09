@@ -26,7 +26,7 @@ final class CssCompressor implements CompressorInterface
 
         $this->css = str_replace(array("\r\n", "\r", "\n", "\t"), '', $this->css);
 
-        $this->css = ereg_replace(' {2,}', ' ', $this->css);
+        $this->css = preg_replace(' {2,}', ' ', $this->css);
 
         $this->css = str_replace(
             array(
