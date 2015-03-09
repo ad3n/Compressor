@@ -1,0 +1,12 @@
+{
+    "name": "ihsanudin/compressor",
+    "license": "MIT",
+    "type": "project",
+    "description": "The \"Symfony Standard Edition\" distribution",
+    "autoload": {
+        "psr-0": { "Ihsan\\Compressor": "" }
+    },
+    "require": {
+        "php": ">=5.3.3"
+    }
+}
