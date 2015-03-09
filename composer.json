@@ -1,8 +1,8 @@
 {
     "name": "ihsanudin/compressor",
     "license": "MIT",
-    "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "type": "library",
+    "description": "Ihsanuddin Composer Library",
     "autoload": {
         "psr-0": { "Ihsan\\Compressor": "" }
     },
