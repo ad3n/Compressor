@@ -7,7 +7,7 @@ namespace Ihsan\Compressor\Bridge\Laravel;
  */
 
 use Illuminate\Support\ServiceProvider;
-use Illuminate\Http\Response;
+use Response;
 use Ihsan\Compressor\HtmlCompressor;
 
 class HtmlCompressorServiceProvider extends ServiceProvider
@@ -18,5 +18,9 @@ class HtmlCompressorServiceProvider extends ServiceProvider
         {
             return Response::make((new HtmlCompressor($value))->compress());
         });
+    }
+
+    public function register()
+    {
     }
 }
