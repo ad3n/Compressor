@@ -10,7 +10,7 @@ use Assetic\Filter\FilterInterface;
 use Assetic\Asset\AssetInterface;
 use Ihsan\Compressor\CssCompressor;
 
-class CssAsseticFilter implements FilterInterface
+class AsseticCssFilter implements FilterInterface
 {
     public function filterDump(AssetInterface $asset)
     {
