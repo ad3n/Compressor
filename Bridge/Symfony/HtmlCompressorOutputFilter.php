@@ -7,16 +7,29 @@ namespace Ihsan\Compressor\Bridge\Symfony;
  */
 
 use Symfony\Component\HttpKernel\Event\FilterResponseEvent;
+use Symfony\Component\HttpKernel\KernelInterface;
 use Ihsan\Compressor\HtmlCompressor;
 
 final class HtmlCompressorOutputFilter
 {
+    /**
+     * @var KernelInterface
+     */
+    private $kernel;
+
+    public function __construct(KernelInterface $kernel)
+    {
+        $this->kernel = $kernel;
+    }
+
     public function onKernelResponse(FilterResponseEvent $event)
     {
-        $response = $event->getResponse();
-        $compressedContent = new HtmlCompressor($response->getContent());
-        $response->setContent($compressedContent->compress());
+        if (! in_array($this->kernel->getEnvironment(), array('test', 'dev'))) {
+            $response = $event->getResponse();
+            $compressedContent = new HtmlCompressor($response->getContent());
+            $response->setContent($compressedContent->compress());
 
-        return $response;
+            return $response;
+        }
     }
 }
